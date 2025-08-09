@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"node Bot-Verifica/index.js\" \"node Bot-Benvenuto/index.js\" \"node Bot-Arrivederci/index.js\" \"node Bot-Regolamento/index.js\" \"node Bot-Tickets/index.js\""
+    "setup": "npm install --prefix Bot-Verifica && npm install --prefix Bot-Benvenuto && npm install --prefix Bot-Arrivederci && npm install --prefix Bot-Regolamento && npm install --prefix Bot-Tickets",
+    "start": "npm run setup && concurrently \"node Bot-Verifica/index.js\" \"node Bot-Benvenuto/index.js\" \"node Bot-Arrivederci/index.js\" \"node Bot-Regolamento/index.js\" \"node Bot-Tickets/index.js\""
   },
   "keywords": [],
   "author": "",
